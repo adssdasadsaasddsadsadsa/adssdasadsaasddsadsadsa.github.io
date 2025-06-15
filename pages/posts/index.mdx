@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Valex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../vlogo.png">
+    <link rel="shortcut icon" type="image/png" href="../vlogo.png">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    <div class="blur-circle blur-circle-1"></div>
+    <div class="blur-circle blur-circle-2"></div>
+    <div class="blur-circle blur-circle-3"></div>
+    <div class="blur-circle blur-circle-4"></div>
+
+    <nav>
+        <div class="nav-left">
+            <a href="/" class="logo">
+                <img src="../logo.webp" alt="Valex Logo" class="logo-img">
+            </a>
+            <a href="https://dash.Valex.io" class="nav-link">Dashboard</a>
+            <a href="https://blog.Valex.io" class="nav-link">Blog</a>
+            <a href="https://docs.Valex.io/" class="nav-link">Documentation</a>
+            <a href="https://discord.gg/valex" class="nav-link">Support</a>
+            <a href="https://valex.io/obfuscator" class="nav-link">Obfuscator</a>
+        </div>
+        <div class="nav-right">
+            <a href="https://1cheats.com/store/category/69-valex-executor/" class="nav-btn buy-key-btn"><span class="material-icons">shopping_cart</span> Buy Key</a>
+            <a href="https://discord.gg/valex" class="nav-btn discord-btn"><span class="material-icons">discord</span> Discord</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="version-badge">
+            <p class="description">1.0.3V-PUBLISH</p>
+        </div>
+        
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="title-container">
+                <h1>Valex Blog</h1>
+                <h1 class="accent">Latest Updates</h1>
+            </div>
+            <p class="description">Stay up to date with the latest news, updates, and announcements from the Valex team.</p>
+            <div class="button-container">
+                <a href="https://discord.gg/valex" class="nav-btn buy-key-btn">
+                    <span class="material-icons">discord</span> Join Discord
+                </a>
+                <a href="https://1cheats.com/store/category/69-valex-executor/" class="hero-btn">
+                    <span class="material-icons">shopping_cart</span> Buy Key
+                </a>
+            </div>
+        </div>
+
+        <div class="blog-posts-container">
+            <!-- Blog posts will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <img src="../logo.webp" alt="Valex Logo" class="logo-img">
+                </a>
+                <a href="https://status.valex.io" class="footer-status">
+                    <span class="status-icon material-icons">check_circle</span>
+                    All Systems Operational
+                </a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <a href="#download">Download</a>
+                    <a href="https://docs.valex.io">Documentation</a>
+                    <a href="https://status.valex.io">Status</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <a href="/about">About</a>
+                    <a href="https://blog.valex.io">Blog</a>
+                    <a href="/careers">Careers</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <a href="/terms">Terms</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        :root {
+            --font-title: 'Lexend', sans-serif;
+            --font-mono: 'Source Code Pro', monospace;
+            --color-bg: #000000;
+            --color-primary: #ff0000;
+            --color-text: #ffffff;
+            --nav-height: 3.5rem;
+            --primary: #d10000;
+            --primary-glow: rgba(209, 0, 0, 0.15);
+            --bg: #050505;
+            --card-bg: #0a0a0a;
+            --nav-bg: rgba(10, 10, 10, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --gradient-primary: linear-gradient(90deg, #d10000, #ff4d4d);
+            --gradient-dark: linear-gradient(to right, #111, #222);
+            --glass-bg: rgba(15, 15, 15, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-sans);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-title);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            z-index: 100;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .nav-btn {
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 0, 0, 0.3);
+            border-color: rgba(255, 0, 0, 0.2);
+        }
+
+        .blur-circle {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .blur-circle-1 {
+            background: #ff0000;
+            top: -200px;
+            left: -200px;
+        }
+
+        .blur-circle-2 {
+            background: #ff0000;
+            bottom: -200px;
+            right: -200px;
+        }
+
+        .blur-circle-3 {
+            background: #ff0000;
+            top: 40%;
+            left: 30%;
+        }
+
+        .blur-circle-4 {
+            background: #ff0000;
+            bottom: 30%;
+            right: 25%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: calc(var(--nav-height) + 4rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 2rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../bg.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            opacity: 1;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .title-container {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .title-container h1 {
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            letter-spacing: -0.03em;
+            font-family: var(--font-title);
+        }
+
+        .title-container .accent {
+            background: linear-gradient(90deg, #d10000, #ff4d4d);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.8s 0.2s ease forwards, gradientShift 5s ease infinite;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #888888;
+            max-width: 700px;
+            line-height: 1.7;
+            margin: 0 auto 2.5rem;
+            animation: fadeInUp 0.8s 0.4s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            font-weight: 400;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            letter-spacing: -0.01em;
+        }
+
+        .hero-btn:hover {
+            background: rgba(255, 0, 0, 0.3);
+            border-color: rgba(255, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(23, 23, 23, 0.5);
+            border: 1px solid rgba(90, 90, 90, 0.2);
+            border-radius: 4px;
+            padding: 2px 8px;
+            backdrop-filter: blur(10px);
+            margin: 0.1rem 0;
+        }
+
+        .version-badge .description {
+            margin: 0;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer {
+            padding: 4rem 2rem 2rem;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            margin-top: 4rem;
+            border: none;
+            border-radius: 0;
+            color: white;
+            overflow-x: visible;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 0;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: visible;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-width: 200px;
+            position: absolute;
+            left: 0;
+        }
+
+        .footer-logo {
+            height: auto;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .footer-logo .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .footer-status:hover {
+            color: white;
+        }
+
+        .status-icon {
+            color: #27AE60;
+            font-size: 16px;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 8rem;
+            margin-left: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-links h3 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.15;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.15;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            nav {
+                width: 95%;
+                padding: 0 1rem;
+            }
+            
+            .nav-left, .nav-right {
+                gap: 0.75rem;
+            }
+            
+            .logo {
+                margin-right: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+            
+            .nav-left {
+                width: 30%;
+            }
+            
+            .nav-right {
+                width: 70%;
+                gap: 0.75rem;
+            }
+            
+            .nav-btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            
+            .logo {
+                font-size: 1.6rem;
+            }
+            
+            .title-container h1 {
+                font-size: 3rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-right {
+                gap: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .title-container h1 {
+                font-size: 2.5rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .nav-btn span {
+                display: none;
+            }
+            
+            .nav-btn {
+                padding: 8px;
+            }
+            
+            .nav-right {
+                gap: 0.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (!targetElement) return;
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, 
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const scrollPercent = (scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            document.body.style.setProperty('--scroll-position', `${scrollPercent}%`);
+            document.querySelector('.blur-circle-1').style.transform = `translate(${scrollY * 0.05}px, ${scrollY * 0.02}px)`;
+            document.querySelector('.blur-circle-2').style.transform = `translate(${-scrollY * 0.03}px, ${scrollY * 0.04}px)`;
+            document.querySelector('.blur-circle-3').style.transform = `translate(${scrollY * 0.02}px, ${-scrollY * 0.03}px)`;
+            document.querySelector('.blur-circle-4').style.transform = `translate(${-scrollY * 0.04}px, ${scrollY * 0.05}px)`;
+            const nav = document.querySelector('nav');
+            if (scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="../card-effect.js"></script>
+</body>
+</html>
